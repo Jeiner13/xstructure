@@ -1,0 +1,34 @@
+/* Estilos personalizados */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* equivalente a gap-3 de Tailwind */
+  }
+  
+  .logo-icon {
+    width: 2rem;   /* w-8 */
+    height: 2rem;  /* h-8 */
+    color: #2563eb; /* text-blue-600 */
+  }
+  
+  .logo-text {
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 700;    /* font-bold */
+    color: #111827;      /* text-gray-900 */
+  }
+  
+  .logo-text span {
+    color: #2563eb; /* text-blue-600 */
+  }
+
+  
+  
+.nav-link {
+    @apply flex items-center gap-2 text-lg font-medium text-gray-700 hover:text-blue-600 transition-colors;
+  }
+  
+  .btn-primary {
+    @apply bg-white text-blue-600 px-10 py-4 rounded-full text-xl font-semibold shadow-xl 
+           hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3 mx-auto;
+  }
+  
