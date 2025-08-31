@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generador de Códigos QR</title>
+<link rel="stylesheet" href="styles/qr.css">
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
+</head>
+<body>
+<header>
+<h1>Generador de Códigos QR</h1>
+</header>
+
+
+<main>
+<label for="qrText">Texto o URL:</label>
+<textarea id="qrText" rows="3" placeholder="Escribe un texto o URL"></textarea>
+
+
+<div class="options">
+<label>Tamaño:</label>
+<input type="range" id="qrSize" min="128" max="512" value="256" step="32">
+<span id="sizeLabel">256 px</span>
+</div>
+
+
+<div class="options">
+<label>Color:</label>
+<input type="color" id="qrColor" value="#111827">
+<label>Fondo:</label>
+<input type="color" id="qrBg" value="#ffffff">
+</div>
+
+
+<button onclick="generateQR()">Generar QR</button>
+
+
+<div id="qrcode"></div>
+
+
+<div id="downloadBtns" class="hidden">
+<button onclick="downloadQR('png')">Descargar PNG</button>
+<button onclick="downloadQR('jpg')">Descargar JPG</button>
+</div>
+</main>
+
+
+<footer>
+Hecho con ❤️ — Funciona 100% en tu navegador
+</footer>
+
+
+<script src="scripts/qr.js"></script>
+</body>
+</html>
