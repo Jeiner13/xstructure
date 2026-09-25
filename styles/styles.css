@@ -1,34 +1,151 @@
-/* Estilos personalizados */
+/* =========================================================
+   xStructure - Estilos personalizados
+   Infraestructura y Construcción
+   ========================================================= */
+
+/* -------------------------
+   VARIABLES DE MARCA
+   ------------------------- */
+
+:root {
+  --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
+  --color-secondary: #0f172a;
+  --color-text: #111827;
+  --color-text-light: #6b7280;
+  --color-border: #e5e7eb;
+  --color-background: #f8fafc;
+}
+
+
+/* -------------------------
+   LOGO
+   ------------------------- */
+
 .logo-container {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem; /* equivalente a gap-3 de Tailwind */
-  }
-  
-  .logo-icon {
-    width: 2rem;   /* w-8 */
-    height: 2rem;  /* h-8 */
-    color: #2563eb; /* text-blue-600 */
-  }
-  
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-icon {
+  width: 2rem;
+  height: 2rem;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.logo-text {
+  font-size: 1.875rem;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: -0.025em;
+}
+
+.logo-text span {
+  color: var(--color-primary);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+
+/* -------------------------
+   NAVEGACIÓN
+   ------------------------- */
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  font-size: 1rem;
+  font-weight: 500;
+  color: #374151;
+
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-primary);
+  transform: translateY(-1px);
+}
+
+
+/* -------------------------
+   BOTÓN PRINCIPAL
+   ------------------------- */
+
+.btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 1rem 2.5rem;
+
+  background-color: white;
+  color: var(--color-primary);
+
+  border-radius: 9999px;
+
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.15);
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #f3f4f6;
+  transform: translateY(-2px) scale(1.02);
+
+  box-shadow:
+    0 14px 30px rgba(0, 0, 0, 0.18);
+}
+
+
+/* -------------------------
+   ANCLAS DE SECCIÓN
+   ------------------------- */
+
+.section-anchor {
+  scroll-margin-top: 90px;
+}
+
+
+/* -------------------------
+   RESPONSIVE
+   ------------------------- */
+
+@media (max-width: 768px) {
+
   .logo-text {
-    font-size: 1.875rem; /* text-3xl */
-    font-weight: 700;    /* font-bold */
-    color: #111827;      /* text-gray-900 */
-  }
-  
-  .logo-text span {
-    color: #2563eb; /* text-blue-600 */
+    font-size: 1.5rem;
   }
 
-  
-  
-.nav-link {
-    @apply flex items-center gap-2 text-lg font-medium text-gray-700 hover:text-blue-600 transition-colors;
+  .logo-text span {
+    display: block;
+    font-size: 0.7rem;
+    margin-top: 0.2rem;
   }
-  
+
   .btn-primary {
-    @apply bg-white text-blue-600 px-10 py-4 rounded-full text-xl font-semibold shadow-xl 
-           hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3 mx-auto;
+    padding: 0.875rem 1.75rem;
+    font-size: 1rem;
   }
-  
+}
